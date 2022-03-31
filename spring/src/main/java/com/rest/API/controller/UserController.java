@@ -14,28 +14,28 @@ public class UserController {
     @Autowired
     UserRepository userRepository;
 
-    // Get All Notes
+    // Get All Users
     @GetMapping("/users")
-    public List<User> getAllNotes() {
+    public List<User> getAllUsers() {
         return userRepository.findAll();
     }
 
-    // Create a new Note
+    // Create a new User
     @PostMapping("/users")
-    public User createNote(@Valid @RequestBody User user) {
+    public User createUser(@Valid @RequestBody User user) {
         return userRepository.save(user);
     }
 
-    // Get a Single Note
+    // Get a Single User
     @GetMapping("/users/{id}")
-    public User getNoteById(@PathVariable(value = "id") Long userId) throws UserNotFoundException {
+    public User getUserById(@PathVariable(value = "id") Long userId) throws UserNotFoundException {
         return userRepository.findById(userId)
                 .orElseThrow(() -> new UserNotFoundException(userId));
     }
 
-    // Update a Note
+    // Update a User
     @PutMapping("/users/{id}")
-    public User updateNote(@PathVariable(value = "id") Long userId,
+    public User updateUser(@PathVariable(value = "id") Long userId,
                            @Valid @RequestBody User userDetails) throws UserNotFoundException {
 
         User user = userRepository.findById(userId)
@@ -51,7 +51,7 @@ public class UserController {
     }
 
 
-    // Delete a Note
+    // Delete a User
     @DeleteMapping("/users/{id}")
     public ResponseEntity<?> deleteUser(@PathVariable(value = "id") Long userId) throws UserNotFoundException {
         User user = userRepository.findById(userId)

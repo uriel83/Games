@@ -10,7 +10,7 @@ public class User {
     @GeneratedValue
     private Long id;
     @NotBlank 
-    private String User_name;
+    private String user_name;
     @NotBlank
     private String author_name;
     @NotBlank
@@ -18,10 +18,10 @@ public class User {
     public User(){
         super();
     }
-    public User(Long id, String User_name, String author_name, String isbn) {
+    public User(Long id, String user_name, String author_name, String isbn) {
         super();
         this.id = id;
-        this.User_name = User_name;
+        this.user_name = user_name;
         this.author_name = author_name;
         this.isbn=isbn;
     }
@@ -32,10 +32,10 @@ public class User {
         this.id = id;
     }
     public String getUser_name() {
-        return User_name;
+        return user_name;
     }
-    public void setUser_name(String User_name) {
-        this.User_name = User_name;
+    public void setUser_name(String user_name) {
+        this.user_name = user_name;
     }
     public String getAuthor_name() {
         return author_name;
