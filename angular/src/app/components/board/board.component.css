@@ -1,0 +1,39 @@
+.bored{
+    margin-left:25% ;
+    width: 500px;
+    min-width: 700px;
+    margin-top: 10%;
+}
+.square{
+    margin:10px ;
+    width: 200px;
+    height: 200px;
+    min-height: 10%;
+    
+}
+.win{
+    color: brown;
+    font-size: 100px;
+    /* width: 200px; */
+    position:fixed;
+    margin-top: -120px;
+    margin-left: 160px;
+    margin-bottom: 40px;
+}
+
+
+.button_center{
+    position:fixed;
+    margin-top: 700px;
+    width: 150px;
+    margin-left: 245px;
+}
+
+.GameOver{
+    position:fixed;
+    margin-top: 80px;
+    margin-left: 40px;
+    color: brown;
+    font-size: 100px;
+    width: 400px;
+}

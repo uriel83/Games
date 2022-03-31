@@ -1,0 +1,17 @@
+.arrow-up {
+    width: 0; 
+    height: 0; 
+    border-left: 80px solid transparent;
+    border-right: 80px solid transparent;
+    
+    border-bottom: 600px solid black;
+  }
+  
+  .arrow-down {
+    width: 0; 
+    height: 0; 
+    border-left: 80px solid transparent;
+    border-right: 80px solid transparent;
+    
+    border-top: 600px solid rgb(129, 3, 3);
+  }

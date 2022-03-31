@@ -1,0 +1,18 @@
+<div class="row bored">
+
+<div class="GameOver" *ngIf="borderService.GameOver && !borderService.win">Game Over</div>
+<div class="center" *ngIf="borderService.win"></div>
+
+<ng-container *ngIf="borderService.win">
+    <div class="win" *ngIf="this.borderService.GameMoves%2==0">O WIN</div>
+    <div class="win" *ngIf="this.borderService.GameMoves%2!=0">X WIN</div>
+</ng-container>
+    <div *ngFor="let square of borderService.squares; let i = index" class="square">
+        <app-square [chosenSquare]="i"></app-square>
+    </div>
+    <button *ngIf="borderService.GameOver || borderService.win" 
+    class="btn btn-warning button_center" (click)="borderService.newGame()">Play again</button>
+
+</div>
+
+
