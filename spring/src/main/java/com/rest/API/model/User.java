@@ -5,48 +5,50 @@ import javax.validation.constraints.NotBlank;
 
 @Entity 
 @Table(name = "users") 
-public class User {
-    @Id
-    @GeneratedValue
-    private Long id;
+public class User extends BaseModel{
+  
     @NotBlank 
-    private String user_name;
+    private String first_name;
     @NotBlank
-    private String author_name;
+    private String last_name;
     @NotBlank
-    private String isbn;
+    private String email;
+    @NotBlank
+    private String password;
     public User(){
         super();
     }
-    public User(Long id, String user_name, String author_name, String isbn) {
+    public User( String first_name, String last_name, String email, String password) {
         super();
-        this.id = id;
-        this.user_name = user_name;
-        this.author_name = author_name;
-        this.isbn=isbn;
+        
+        this.first_name = first_name;
+        this.last_name = last_name;
+        this.email=email;
+        this.password=password;
     }
-    public Long getId() {
-        return id;
+   
+    public String getFirst_name() {
+        return first_name;
     }
-    public void setId(Long id) {
-        this.id = id;
+    public void setFirst_name(String first_name) {
+        this.first_name = first_name;
     }
-    public String getUser_name() {
-        return user_name;
+    public String getLast_name() {
+        return last_name;
     }
-    public void setUser_name(String user_name) {
-        this.user_name = user_name;
+    public void setLast_name(String last_name) {
+        this.last_name = last_name;
     }
-    public String getAuthor_name() {
-        return author_name;
+    public String getEmail() {
+        return email;
     }
-    public void setAuthor_name(String author_name) {
-        this.author_name = author_name;
+    public void setEmail(String email) {
+        this.email = email;
     }
-    public String getIsbn() {
-        return isbn;
+    public String getPassword() {
+        return password;
     }
-    public void setIsbn(String isbn) {
-        this.isbn = isbn;
+    public void setPassword(String password) {
+        this.password = password;
     }
 }
