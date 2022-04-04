@@ -1,0 +1,139 @@
+<div class="col-12">
+    <!-- Content -->
+        <div class="row">
+        
+          <div class="col-5 " style=" background-color: #F7F7FB ">
+            <div class="card card-create " > 
+              <div class=" pt-8 pb-4" >
+                <!-- Form -->
+                <form class="" style="margin:auto;">
+                  <div class="text-center mb-5 " style="margin-top: -30px;">
+                    <h1 class="display-4">Create your account</h1>
+                    <div >Already have an account? <a href="/sign-in">Sign in.</a></div>
+                  </div>
+    
+                  <!-- <div  class="mb-4">
+                    <a class="btn btn-lg btn-white btn-block" href="#">
+                      <span class="d-flex justify-content-center align-items-center">
+                        <img class="avatar avatar-xss mr-2" src="./assets/svg/brands/google.svg" alt="Image Description">
+                        Sign up with Google
+                      </span>
+                    </a>
+                  </div>
+    
+                  <div class="text-center mb-4">
+    
+                    <span class="divider text-muted">OR</span>
+                  </div> -->
+    
+                  
+    
+                  <!-- Form Group -->
+                  <div class="form-row">
+                    <div class="col-sm-6">
+                      <div class="js-form-message ">
+                        <label class="input-label lable_color"  for="fName">First name</label>
+                        <input ngModel #fName="ngModel" type="text" class="form-control form-control-lg input_name" name="fName" id="fName"
+                          placeholder="Enter your first name" required pattern="^[a-zA-Z]{2,}"
+                          [class]="fName.pristine ? '' : fName.invalid ? 'border border-danger' : 'border border-success'">
+                        <p *ngIf="!fName.pristine && fName.invalid" class="text-danger">At least two letters</p>
+                      </div>
+                    </div>
+                    <div class="col-sm-6">
+                      <div class="js-form-message ">
+                        <label class="input-label lable_color" style="margin-left: 1%;" for="lName">Last name</label>
+                        <input ngModel #lName="ngModel" type="text" class="form-control form-control-lg input_name" style="margin-left: 5%;" placeholder="Enter your last name"
+                          name="lName" id="lName" required pattern="^[a-zA-Z]{2,}"
+                          [class]="lName.pristine ? '' : lName.invalid ? 'border border-danger' : 'border border-success'">
+                        <p *ngIf="!lName.pristine && lName.invalid" class="text-danger">At least two letters</p>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- End Form Group -->
+    
+                  <!-- Form Group -->
+                 
+                  <div class="js-form-message ">
+                    <label class="input-label lable_color" for="signupSrEmail">Your email</label>
+    
+                    <input ngModel #email="ngModel" type="email" class="form-control form-control-lg input_sign_up" name="email" id="email"
+                      placeholder="Email" required pattern="^\S+@\S+$"
+                      [class]="email.pristine ? '' : email.invalid ? 'border border-danger' : 'border border-success'">
+                    <p *ngIf="!email.pristine && email.invalid" class="text-danger">Invalid email address</p>
+                  </div>
+                  <!-- End Form Group -->
+    
+                  <!-- Form Group -->
+                  <div class="js-form-message ">
+                    <label class="input-label lable_color" for="signupSrPassword">Password</label>
+    
+                    <div class="input-group input-group-merge">
+                      <input ngModel #password="ngModel" [type]="passwordShow ? 'text' : 'password'"
+                        class="js-toggle-password form-control form-control-lg input_password" name="password" id="password"
+                        placeholder="Enter your password" aria-label="8+ characters required" required
+                        [class]="password.pristine ? '' : password.value.length < 8 ? 'border border-danger' : 'border border-success'">
+                      <div class="js-toggle-password-target-1 input-group-append">
+                        <a class="input-group-text">
+                          <i #password
+                            [class]="passwordShow ? 'js-toggle-passowrd-show-icon-2 tio-visible-outlined' : 'js-toggle-passowrd-show-icon-2 tio-hidden-outlined'"
+                            (click)="passwordHide(password.name)"></i>
+                        </a>
+                      </div>
+                    </div>
+                    <label *ngIf="password.pristine && password.value.length < 8" class="input-label confirm_password" for="signupSrConfirmPassword" >Use 8 or more characters with a mix of letters, numbers & symbols.</label>
+                    <p *ngIf="!password.pristine && password.value.length < 8" class="text-danger">Use 8 or more characters with a mix of letters, numbers & symbols.</p>
+                  </div>
+                  <!-- End Form Group -->
+    
+                  <!-- Form Group -->
+                  <div class="form-group">
+                    <label class="input-label lable_color" for="signupSrConfirmPassword">Confirm your password</label>
+    
+                    <div class="input-group input-group-merge">
+                      <input ngModel #confirmPassword="ngModel" [type]="confirmPasswordShow ? 'text' : 'password'"
+                        class="js-toggle-password form-control form-control-lg input_password" name="confirmPassword" id="confirmPassword"
+                        placeholder="Enter your password" required
+                        [class]="confirmPassword.pristine ? '' : confirmPassword.value != password.value ? 'border border-danger' : 'border border-success'">
+                      <div class="js-toggle-password-target-2 input-group-append">
+                        
+                        <a class="input-group-text" href="javascript:;">
+                          <i #confirmPassword
+                            [class]="confirmPasswordShow ? 'js-toggle-passowrd-show-icon-2 tio-visible-outlined' : 'js-toggle-passowrd-show-icon-2 tio-hidden-outlined'"
+                            (click)="passwordHide(confirmPassword.name)"></i>
+                        </a>
+                        
+                      </div>
+                      
+                    </div>
+                    <p *ngIf="!confirmPassword.pristine && confirmPassword.value != password.value" class="text-danger">the
+                      passwords did not matched</p>
+                  </div>
+              
+    
+                  <!-- End Form Group -->
+    
+                  <!-- Checkbox -->
+                  <div class="form-group">
+                    <div class="custom-control custom-checkbox">
+                      <input type="checkbox" class="custom-control-input" id="termsCheckbox" name="termsCheckbox" required>
+                      <label class="custom-control-label text-muted" for="termsCheckbox"> I agree with  <a href="#">Terms and conditions</a></label>
+                    </div>
+                  </div>
+                  <!-- End Checkbox -->
+    
+                  <button
+                    [disabled]="fName.invalid || lName.invalid || email.invalid || password.value.length < 8 || confirmPassword.value != password.value"
+                    type="submit" class="button-right " 
+                    (click)="createUser(fName.value, lName.value, email.value, password.value)">Submit</button>
+                  
+                
+                </form>
+              </div>
+              <!-- End Form -->
+            </div>
+          </div>
+        </div>
+        <!-- End Row -->
+    
+    <!-- End Content -->
+    </div>

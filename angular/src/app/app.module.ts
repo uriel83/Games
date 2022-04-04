@@ -10,6 +10,9 @@ import { BoardComponent } from './components/board/board.component';
 import { SquareComponent } from './components/square/square.component';
 import { BackgammonComponent } from './components/backgammon/backgammon.component';
 import { TriangularComponent } from './components/backgammon/triangular/triangular.component';
+import { SignInComponent } from './components/sign-in/sign-in.component';
+import { FormsModule } from '@angular/forms';
+import { SignUpComponent } from './components/sign-up/sign-up.component';
 
 
 
@@ -20,7 +23,9 @@ import { TriangularComponent } from './components/backgammon/triangular/triangul
     BoardComponent,
     SquareComponent,
     TriangularComponent,
-    BackgammonComponent
+    BackgammonComponent,
+    SignInComponent,
+    SignUpComponent
    
    
   ],
@@ -29,7 +34,8 @@ import { TriangularComponent } from './components/backgammon/triangular/triangul
     AppRoutingModule,
     NgbModule,
     HttpClientModule,
-     FontAwesomeModule
+     FontAwesomeModule,
+     FormsModule
 
 
   ],

@@ -1,0 +1,66 @@
+<form name="signInForm" #signInForm="ngForm" class="form-group">
+    <div class="card" style="margin: 15px; padding: 15px; min-width:300px ">
+      <div class="text-center mb-5">
+        <h1 class="display-4">Sign in</h1>
+      </div>
+  
+      
+     
+  
+      <!-- Form Group -->
+      <div class="form-group">
+        <label class="input-label" for="inputEmail">Email address</label>
+        <input type="text" ngModel #inputEmail="ngModel" class="form-control form-control-lg" style=" min-width: 200px; "
+          name="inputEmail" id="inputEmail" placeholder="name@adress.com" required pattern="^\S+@\S+$"
+          [class]="inputEmail.pristine ? '' : inputEmail.invalid ? 'border border-danger' : 'border border-success'">
+        <p *ngIf="!inputEmail.pristine && inputEmail.invalid" class="text-danger">Invalid email address</p>
+      </div>
+      <!-- End Form Group -->
+  
+  
+  
+      <!-- Form Group -->
+      <div class="form-group">
+        <label class="input-label" for="signupSrPassword" tabindex="0">
+          <span class="d-flex justify-content-between align-items-center">
+            Password
+          </span>
+        </label>
+        <div class=" input-group-merge">
+          <input ngModel #inputPassword="ngModel" [type]="show ? 'text' : 'password'"
+            class="js-toggle-password form-control form-control-lg"style=" min-width: 200px; "
+            [class]="inputPassword.pristine ? '' : inputPassword.value.length < 8 ? 'border border-danger' : 'border border-success'"
+            name="inputPassword" id="inputPassword" placeholder="Enter your password">
+          <div id="changePassTarget" class="input-group-append">
+            <a class="input-group-text">
+              <i id="changePassIcon" [class]="show ? 'tio-visible-outlined' : 'tio-hidden-outlined'"
+                (click)="passwordHide()"></i>
+            </a>
+          </div>
+        </div>
+        <p *ngIf="!inputPassword.pristine && inputPassword.value.length < 8" class="text-danger">Password must be at least 8 charecters</p>
+        <a class=""  routerLink="/forgot-password">Forgot Password?</a>
+  
+      </div>
+      <!-- End Form Group -->
+  
+      <!-- Checkbox -->
+      <!-- <div class="form-group">
+        <div class="custom-control custom-checkbox">
+          <input type="checkbox" class="custom-control-input" id="termsCheckbox" name="termsCheckbox">
+          <label class="custom-control-label text-muted" for="termsCheckbox"> Remember me</label>
+        </div>
+      </div> -->
+      <!-- End Checkbox -->
+  
+      <button [disabled]="signInForm.invalid || inputPassword.invalid || inputPassword.value.length < 8" type="submit"
+        class="btn btn-primary" (click)="signInClick(inputEmail.value, inputPassword.value)" 
+        style="width: 2 vw;height: 40px; margin-left: 55%; margin-right: 1.5%;">Sign in</button>
+      <div *ngIf="serverError" class="text-center mt-2">
+        <h2 class="text-danger">User not found</h2>
+      </div>
+    </div>
+    <div class="text-center mb-5">
+      <p>Don't have an account yet? <a href="/sign-up">Sign up</a></p>
+    </div>
+  </form>
