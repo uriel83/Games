@@ -13,6 +13,8 @@ import { TriangularComponent } from './components/backgammon/triangular/triangul
 import { SignInComponent } from './components/sign-in/sign-in.component';
 import { FormsModule } from '@angular/forms';
 import { SignUpComponent } from './components/sign-up/sign-up.component';
+import { ChessBoardComponent } from './chess/chess-board/chess-board.component';
+import { ChessSquareComponent } from './chess/chess-square/chess-square.component';
 
 
 
@@ -25,7 +27,9 @@ import { SignUpComponent } from './components/sign-up/sign-up.component';
     TriangularComponent,
     BackgammonComponent,
     SignInComponent,
-    SignUpComponent
+    SignUpComponent,
+    ChessBoardComponent,
+    ChessSquareComponent
    
    
   ],

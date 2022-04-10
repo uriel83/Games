@@ -1,0 +1,10 @@
+.text{
+    margin-top:  50px;
+    font-size: 20px;
+    margin-right: 10px;
+    max-height: 50px;
+} 
+
+.board{
+    margin: 30px 20%;
+}

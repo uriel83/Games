@@ -1,5 +1,6 @@
 import { Component, NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
+import { ChessBoardComponent } from './chess/chess-board/chess-board.component';
 import { BackgammonComponent } from './components/backgammon/backgammon.component';
 import { BoardComponent } from './components/board/board.component';
 import { HomeComponent } from './components/home/home.component';
@@ -15,7 +16,8 @@ const routes: Routes = [
    {path: 'home', component : HomeComponent},
    {path: 'tic-tac-toe', component:BoardComponent},
    {path: 'backgammon', component:BackgammonComponent},
-  
+   {path: 'chess', component:ChessBoardComponent},
+
 ];
 
 @NgModule({

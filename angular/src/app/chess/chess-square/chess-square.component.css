@@ -1,0 +1,40 @@
+.squareBlack{
+    background-color: rgb(129, 126, 126);
+     width: 150px;
+     height: 150px;
+     text-align:center;
+     font-size: 150px;
+}
+
+.squareWhite{
+    background-color: rgb(216, 213, 211);
+     width: 150px;
+     height: 150px;
+     text-align:center;
+     
+}
+
+.border-green{
+    border: solid green 7px;
+}
+.border-red{
+    border: solid red 7px;
+
+}
+.text{
+font-size: 20px;
+position:absolute;
+margin-left: 0.5%;
+}
+
+.text1{
+    font-size: 20px;
+    position:absolute;
+    margin-left: 5%;
+    color: bisque;
+    
+}
+
+.gameTools{
+    font-size: 100px;
+}
