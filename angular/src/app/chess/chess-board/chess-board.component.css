@@ -1,10 +1,25 @@
-.text{
-    margin-top:  50px;
+.text-right{
+    margin-top:  10px;
+    font-size: 20px;
+    margin-right: 10px;
+    max-height: 50px;
+    color: aqua;
+} 
+.text-up{
+    margin-top:  20px;
     font-size: 20px;
     margin-right: 10px;
     max-height: 50px;
 } 
 
+
 .board{
-    margin: 30px 20%;
+    margin: 30px 20vw 0px 25vw;
+    width: 49vw;
+    height: 49vw;
+    border: solid black 2vw;
+    padding-left: 0.7vw;
+    padding-top: 0vw;
+    
+
 }

@@ -1,6 +1,6 @@
 <div [ngClass]="squareClass(x,y)"   (click)="playerClick(x,y)">
-    <div class="text1">{{square.gameToolsWhite}}</div>
-    <div class="text">{{square.gameToolsBlack}}</div>
-    <div class="gameTools">{{square.tool}}</div>
+    <div class="text1">{{chessService.board[x][y].gameToolsWhite}}</div>
+    <div class="text">{{chessService.board[x][y].gameToolsBlack}}</div>
+    <div class="gameTools">{{chessService.board[x][y].tool}}</div>
     
 </div>

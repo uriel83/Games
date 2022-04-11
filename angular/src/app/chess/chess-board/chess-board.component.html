@@ -1,11 +1,11 @@
 
 <div class="board ">
     <div *ngFor="let col of chessService.board; let y = index" class="row">
-        <div class="text">{{y+1}}</div>
+        <!-- <div class="text-up">{{y+1}}</div> -->
         
         <div *ngFor="let row of col ; let x = index">
-            <div *ngIf="y==0" class="text">{{x+1}}</div>
-            <app-chess-square [y]="y" [x]="x" [square]= chessService.board[x][y] ></app-chess-square>
+            <!-- <div *ngIf="y==0" class="text-right">{{x+1}}</div> -->
+            <app-chess-square [y]="y" [x]="x" ></app-chess-square>
         </div>
     </div>
 </div>

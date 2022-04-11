@@ -6,7 +6,11 @@ import { ToolWhite } from '../enum/tool-white';
   providedIn: 'root'
 })
 export class ChessServiceService {
-  board: any[][]=[];
+  board: chessSquare[][]=[];
+  playerClick = false;
+  squarePress: any = {x:null, y:null}
+  NumberOfMoves = 1;
+  // square:chessSquare;
   constructor() { }
 
   newBoard(){
@@ -22,7 +26,7 @@ export class ChessServiceService {
         }
     }
   }
-  
+
   newGame(){
    this.newBoard();
     for (let x = 0; x < 8; x++) {
