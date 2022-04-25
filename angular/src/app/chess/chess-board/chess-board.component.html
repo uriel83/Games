@@ -1,4 +1,5 @@
-
+<div>  {{chessService.numberOfMoves}} :מהלכים</div>
+<div>({{chessService.squarePress.x}},{{chessService.squarePress.y}})</div>
 <div class="board ">
     <div *ngFor="let col of chessService.board; let y = index" class="row">
         <!-- <div class="text-up">{{y+1}}</div> -->
@@ -9,3 +10,6 @@
         </div>
     </div>
 </div>
+<div *ngIf="chessService.numberOfMoves % 2 == 0">  התור של הלבן</div>
+<div *ngIf="chessService.numberOfMoves % 2 != 0">  התור של השחור</div>
+

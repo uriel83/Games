@@ -1,15 +1,17 @@
 import { Injectable } from '@angular/core';
 import { ToolBlack } from '../enum/tool-black';
 import { ToolWhite } from '../enum/tool-white';
+import { ChessSquare } from '../model/chessSquare';
+import { SquarePress } from '../model/squarePress';
 
 @Injectable({
   providedIn: 'root'
 })
 export class ChessServiceService {
-  board: chessSquare[][]=[];
+  board: ChessSquare[][]=[];
   playerClick = false;
-  squarePress: any = {x:null, y:null}
-  NumberOfMoves = 1;
+  squarePress: SquarePress = {x:null, y:null}
+  numberOfMoves = 0;
   // square:chessSquare;
   constructor() { }
 

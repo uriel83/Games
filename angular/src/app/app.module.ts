@@ -15,6 +15,7 @@ import { FormsModule } from '@angular/forms';
 import { SignUpComponent } from './components/sign-up/sign-up.component';
 import { ChessBoardComponent } from './chess/chess-board/chess-board.component';
 import { ChessSquareComponent } from './chess/chess-square/chess-square.component';
+import { HeaderComponent } from './components/header/header.component';
 
 
 
@@ -29,7 +30,8 @@ import { ChessSquareComponent } from './chess/chess-square/chess-square.componen
     SignInComponent,
     SignUpComponent,
     ChessBoardComponent,
-    ChessSquareComponent
+    ChessSquareComponent,
+    HeaderComponent
    
    
   ],
